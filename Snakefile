@@ -64,3 +64,19 @@ rule getMST:
         """
             Rscript createMST.R
         """
+
+rule test_melon:
+    input:
+        assembly='example.fa.gz', # you can name inputs and outputs
+    output:
+        speciesID = "example.melon_output",
+    container:
+        'docker://quay.io/biocontainers/melon:0.1.3--pyhdfd78af_0'
+    threads: 4
+    resources:
+        mem_mb=2000,
+        runtime=480,
+    shell:
+        """
+        melon -d /workspace/sandbox-2024/WGS-mini-dataset/databases/melon/database -o {output.speciesID} {input.assembly}
+        """
