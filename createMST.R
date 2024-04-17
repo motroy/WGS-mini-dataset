@@ -1,3 +1,4 @@
+#from https://github.com/zxgsy520/bioyicgmlst.git
 #install.packages("igraph")
 library(igraph)
 options(bitmapType='cairo') #关闭服务器与界面的互动响应
