@@ -97,5 +97,3 @@ The inputs to this rule are the files that feed into the final report, grouped b
 | Bakta | score-assemblies-data/bakta/{id}/{id}.txt |
 
 **Note:** Some plots (PDFs) are also included in the report for visualization, but the main summary files are TSV or TXT as listed above.
-
-Let me know if you need the exact path for each tool or more details about how each file is generated!
